@@ -5,7 +5,7 @@ def vulnerable_login(username, password):
     cur = conn.cursor()
     
     query = f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'"
-    print("Executing query:", query)  
+    print(f"Attempting login for user: {username}")
     cur.execute(query)
 
     result = cur.fetchone()
